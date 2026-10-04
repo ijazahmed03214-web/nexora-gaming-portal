@@ -1096,3 +1096,204 @@ a {
     min-height: 350px;
   }
 }
+/* =========================================================
+   NEXORA MOBILE GAME CONTROLS
+   ========================================================= */
+
+#nexoraGameScreen {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+#nexoraCanvas {
+  width: min(600px, 100%);
+  height: auto;
+  max-height: 65vh;
+  display: block;
+  border: 2px solid rgba(124,92,255,.45);
+  border-radius: 14px;
+  background: #050711;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.nexora-game-controls {
+  width: min(420px, 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 12px;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.nexora-dpad {
+  display: grid;
+  grid-template-columns: repeat(3, 52px);
+  grid-template-rows: repeat(2, 52px);
+  gap: 6px;
+}
+
+.nexora-control-btn {
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 12px;
+  color: white;
+  background: linear-gradient(
+    145deg,
+    rgba(124,92,255,.35),
+    rgba(0,229,255,.12)
+  );
+  box-shadow: 0 8px 20px rgba(0,0,0,.25);
+  font-size: 20px;
+  font-weight: 900;
+  touch-action: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform .1s, background .1s;
+}
+
+.nexora-control-btn:active,
+.nexora-control-btn.active {
+  transform: scale(.9);
+  background: linear-gradient(
+    145deg,
+    var(--primary),
+    var(--secondary)
+  );
+}
+
+.nexora-up {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.nexora-left {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.nexora-down {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.nexora-right {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.nexora-action-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nexora-action-btn {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: 2px solid rgba(0,229,255,.45);
+  color: white;
+  background: linear-gradient(
+    145deg,
+    var(--primary),
+    #9b4dff
+  );
+  box-shadow:
+    0 0 25px rgba(124,92,255,.35),
+    0 10px 25px rgba(0,0,0,.3);
+  font-size: 15px;
+  font-weight: 900;
+  touch-action: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.nexora-action-btn:active,
+.nexora-action-btn.active {
+  transform: scale(.9);
+  box-shadow:
+    0 0 35px rgba(0,229,255,.45),
+    0 8px 18px rgba(0,0,0,.35);
+}
+
+.nexora-game-hint {
+  width: min(600px, 100%);
+  text-align: center;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   MOBILE OPTIMIZATION
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  #nexoraCanvas {
+    width: 100%;
+    max-height: 55vh;
+    border-radius: 10px;
+  }
+
+  .nexora-game-controls {
+    width: 100%;
+    padding: 8px 2px;
+    gap: 12px;
+  }
+
+  .nexora-dpad {
+    grid-template-columns: repeat(3, 46px);
+    grid-template-rows: repeat(2, 46px);
+    gap: 5px;
+  }
+
+  .nexora-control-btn {
+    border-radius: 10px;
+    font-size: 18px;
+  }
+
+  .nexora-action-btn {
+    width: 65px;
+    height: 65px;
+    font-size: 13px;
+  }
+
+  .nexora-game-hint {
+    font-size: 10px;
+    padding: 0 8px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+  .nexora-dpad {
+    grid-template-columns: repeat(3, 40px);
+    grid-template-rows: repeat(2, 40px);
+  }
+
+  .nexora-control-btn {
+    font-size: 16px;
+  }
+
+  .nexora-action-btn {
+    width: 58px;
+    height: 58px;
+    font-size: 11px;
+  }
+
+  .nexora-game-controls {
+    gap: 8px;
+  }
+}
