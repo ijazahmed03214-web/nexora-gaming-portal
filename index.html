@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+  >
 
   <title>NEXORA | Gaming Portal</title>
 
@@ -16,37 +19,53 @@
 
 <body>
 
-  <!-- ================= HEADER ================= -->
+  <!-- =====================================================
+       HEADER
+  ====================================================== -->
+
   <header class="header">
     <div class="nav container">
 
-      <a href="#" class="logo">
+      <a href="#home" class="logo">
         <span class="logo-icon">N</span>
         <span>NEXORA</span>
       </a>
 
-      <nav class="nav-links">
+      <nav class="nav-links" aria-label="Main Navigation">
         <a href="#home">Home</a>
         <a href="#games">Games</a>
         <a href="#categories">Categories</a>
       </nav>
 
-      <a href="#games" class="nav-btn">PLAY NOW</a>
+      <a href="#games" class="nav-btn">
+        PLAY NOW
+      </a>
 
     </div>
   </header>
 
 
-  <!-- ================= HERO ================= -->
+  <!-- =====================================================
+       MAIN
+  ====================================================== -->
+
   <main>
 
+    <!-- ===================================================
+         HERO
+    ==================================================== -->
+
     <section class="hero" id="home">
+
       <div class="hero-bg"></div>
 
       <div class="container hero-content">
 
         <div class="hero-text">
-          <span class="eyebrow">WELCOME TO NEXORA</span>
+
+          <span class="eyebrow">
+            WELCOME TO NEXORA
+          </span>
 
           <h1>
             PLAY.
@@ -55,11 +74,13 @@
           </h1>
 
           <p>
-            Explore 38 exciting browser games. No downloads,
-            no complicated setup — just choose a game and play.
+            Explore exciting browser games with responsive
+            controls for computer, tablet and mobile devices.
+            No downloads. No complicated setup.
           </p>
 
           <div class="hero-buttons">
+
             <a href="#games" class="primary-btn">
               🎮 Explore Games
             </a>
@@ -67,27 +88,45 @@
             <a href="#categories" class="secondary-btn">
               Browse Categories
             </a>
+
           </div>
+
         </div>
 
+
         <div class="hero-card">
-          <div class="hero-controller">🎮</div>
-          <h3>38 Games</h3>
-          <p>Ready to play instantly</p>
+
+          <div class="hero-controller">
+            🎮
+          </div>
+
+          <h3>
+            38 Games
+          </h3>
+
+          <p>
+            Ready to play instantly
+          </p>
 
           <div class="hero-dots">
             <span></span>
             <span></span>
             <span></span>
           </div>
+
         </div>
 
       </div>
+
     </section>
 
 
-    <!-- ================= STATS ================= -->
+    <!-- ===================================================
+         STATS
+    ==================================================== -->
+
     <section class="stats-section">
+
       <div class="container stats">
 
         <div class="stat">
@@ -111,66 +150,122 @@
         </div>
 
       </div>
+
     </section>
 
 
-    <!-- ================= GAMES ================= -->
+    <!-- ===================================================
+         GAME LIBRARY
+    ==================================================== -->
+
     <section class="games-section" id="games">
 
       <div class="container">
 
         <div class="section-heading">
+
           <div>
-            <span class="section-label">GAME LIBRARY</span>
-            <h2>Choose Your <span>Game</span></h2>
+
+            <span class="section-label">
+              GAME LIBRARY
+            </span>
+
+            <h2>
+              Choose Your <span>Game</span>
+            </h2>
+
           </div>
 
           <div class="game-count">
-            <span id="visibleCount">38</span> Games
+            <span id="visibleCount">38</span>
+            Games
           </div>
+
         </div>
 
 
-        <!-- SEARCH -->
+        <!-- =================================================
+             SEARCH + CATEGORIES
+        ================================================== -->
+
         <div class="game-tools">
 
           <div class="search-box">
-            <span>🔎</span>
+
+            <span aria-hidden="true">
+              🔎
+            </span>
+
             <input
               type="search"
               id="searchInput"
               placeholder="Search games..."
               autocomplete="off"
+              aria-label="Search games"
             >
+
           </div>
 
-          <div class="categories" id="categories">
 
-            <button class="category-btn active" data-category="all">
+          <div
+            class="categories"
+            id="categories"
+            aria-label="Game categories"
+          >
+
+            <button
+              class="category-btn active"
+              data-category="all"
+              type="button"
+            >
               All
             </button>
 
-            <button class="category-btn" data-category="arcade">
+            <button
+              class="category-btn"
+              data-category="arcade"
+              type="button"
+            >
               Arcade
             </button>
 
-            <button class="category-btn" data-category="puzzle">
+            <button
+              class="category-btn"
+              data-category="puzzle"
+              type="button"
+            >
               Puzzle
             </button>
 
-            <button class="category-btn" data-category="action">
+            <button
+              class="category-btn"
+              data-category="action"
+              type="button"
+            >
               Action
             </button>
 
-            <button class="category-btn" data-category="sports">
+            <button
+              class="category-btn"
+              data-category="sports"
+              type="button"
+            >
               Sports
             </button>
 
-            <button class="category-btn" data-category="strategy">
+            <button
+              class="category-btn"
+              data-category="strategy"
+              type="button"
+            >
               Strategy
             </button>
 
-            <button class="category-btn" data-category="casual">
+            <button
+              class="category-btn"
+              data-category="casual"
+              type="button"
+            >
               Casual
             </button>
 
@@ -179,462 +274,1291 @@
         </div>
 
 
-        <!-- GAME GRID -->
+        <!-- =================================================
+             GAME GRID
+        ================================================== -->
+
         <div class="games-grid" id="gamesGrid">
 
 
-          <!-- 1 -->
-          <article class="game-card" data-title="Neon Tic Tac Toe" data-category="strategy" data-game="tictactoe">
-            <div class="game-art art-1">❌⭕</div>
+          <!-- 01 -->
+          <article
+            class="game-card"
+            data-title="Neon Tic Tac Toe"
+            data-category="strategy"
+            data-game="tictactoe"
+          >
+
+            <div class="game-art art-1">
+              ❌⭕
+            </div>
+
             <div class="game-info">
+
               <span>Strategy</span>
-              <h3>Neon Tic Tac Toe</h3>
-              <p>Beat the computer.</p>
-              <button class="play-btn">PLAY GAME →</button>
+
+              <h3>
+                Neon Tic Tac Toe
+              </h3>
+
+              <p>
+                Beat the computer.
+              </p>
+
+              <button
+                class="play-btn"
+                type="button"
+              >
+                PLAY GAME →
+              </button>
+
             </div>
+
           </article>
 
 
-          <!-- 2 -->
-          <article class="game-card" data-title="Memory Match" data-category="puzzle" data-game="memory">
-            <div class="game-art art-2">🧠</div>
+          <!-- 02 -->
+          <article
+            class="game-card"
+            data-title="Memory Match"
+            data-category="puzzle"
+            data-game="memory"
+          >
+
+            <div class="game-art art-2">
+              🧠
+            </div>
+
             <div class="game-info">
+
               <span>Puzzle</span>
-              <h3>Memory Match</h3>
-              <p>Find all matching pairs.</p>
-              <button class="play-btn">PLAY GAME →</button>
+
+              <h3>
+                Memory Match
+              </h3>
+
+              <p>
+                Find all matching pairs.
+              </p>
+
+              <button class="play-btn" type="button">
+                PLAY GAME →
+              </button>
+
             </div>
+
           </article>
 
 
-          <!-- 3 -->
-          <article class="game-card" data-title="Number Hunter" data-category="puzzle" data-game="guess">
-            <div class="game-art art-3">🔢</div>
+          <!-- 03 -->
+          <article
+            class="game-card"
+            data-title="Number Hunter"
+            data-category="puzzle"
+            data-game="guess"
+          >
+
+            <div class="game-art art-3">
+              🔢
+            </div>
+
             <div class="game-info">
+
               <span>Puzzle</span>
-              <h3>Number Hunter</h3>
-              <p>Guess the secret number.</p>
-              <button class="play-btn">PLAY GAME →</button>
+
+              <h3>
+                Number Hunter
+              </h3>
+
+              <p>
+                Guess the secret number.
+              </p>
+
+              <button class="play-btn" type="button">
+                PLAY GAME →
+              </button>
+
             </div>
+
           </article>
 
 
-          <!-- 4 -->
-          <article class="game-card" data-title="RPS Arena" data-category="casual" data-game="rps">
-            <div class="game-art art-4">✊</div>
+          <!-- 04 -->
+          <article
+            class="game-card"
+            data-title="RPS Arena"
+            data-category="casual"
+            data-game="rps"
+          >
+
+            <div class="game-art art-4">
+              ✊
+            </div>
+
             <div class="game-info">
+
               <span>Casual</span>
-              <h3>RPS Arena</h3>
-              <p>Rock, paper or scissors.</p>
-              <button class="play-btn">PLAY GAME →</button>
+
+              <h3>
+                RPS Arena
+              </h3>
+
+              <p>
+                Rock, paper or scissors.
+              </p>
+
+              <button class="play-btn" type="button">
+                PLAY GAME →
+              </button>
+
             </div>
+
           </article>
 
 
-          <!-- 5 -->
-          <article class="game-card" data-title="Click Rush" data-category="arcade" data-game="clicker">
-            <div class="game-art art-5">👆</div>
+          <!-- 05 -->
+          <article
+            class="game-card"
+            data-title="Click Rush"
+            data-category="arcade"
+            data-game="clicker"
+          >
+
+            <div class="game-art art-5">
+              👆
+            </div>
+
             <div class="game-info">
+
               <span>Arcade</span>
-              <h3>Click Rush</h3>
-              <p>Click as fast as possible.</p>
-              <button class="play-btn">PLAY GAME →</button>
+
+              <h3>
+                Click Rush
+              </h3>
+
+              <p>
+                Click as fast as possible.
+              </p>
+
+              <button class="play-btn" type="button">
+                PLAY GAME →
+              </button>
+
             </div>
+
           </article>
 
 
-          <!-- 6 -->
-          <article class="game-card" data-title="Snake Rush" data-category="arcade" data-game="snake">
-            <div class="game-art art-6">🐍</div>
+          <!-- 06 -->
+          <article
+            class="game-card"
+            data-title="Snake Rush"
+            data-category="arcade"
+            data-game="snake"
+          >
+
+            <div class="game-art art-6">
+              🐍
+            </div>
+
             <div class="game-info">
+
               <span>Arcade</span>
-              <h3>Snake Rush</h3>
-              <p>Eat food and grow.</p>
-              <button class="play-btn">PLAY GAME →</button>
+
+              <h3>
+                Snake Rush
+              </h3>
+
+              <p>
+                Eat food and grow.
+              </p>
+
+              <button class="play-btn" type="button">
+                PLAY GAME →
+              </button>
+
             </div>
+
           </article>
 
 
-          <!-- 7 -->
-          <article class="game-card" data-title="Whack Attack" data-category="arcade" data-game="whack">
-            <div class="game-art art-7">🔨</div>
+          <!-- 07 -->
+          <article
+            class="game-card"
+            data-title="Whack Attack"
+            data-category="arcade"
+            data-game="whack"
+          >
+
+            <div class="game-art art-7">
+              🔨
+            </div>
+
             <div class="game-info">
+
               <span>Arcade</span>
-              <h3>Whack Attack</h3>
-              <p>Hit the target quickly.</p>
-              <button class="play-btn">PLAY GAME →</button>
+
+              <h3>
+                Whack Attack
+              </h3>
+
+              <p>
+                Hit the target quickly.
+              </p>
+
+              <button class="play-btn" type="button">
+                PLAY GAME →
+              </button>
+
             </div>
+
           </article>
 
 
-          <!-- 8 -->
-          <article class="game-card" data-title="Reaction Rush" data-category="action" data-game="reaction">
-            <div class="game-art art-8">⚡</div>
+          <!-- 08 -->
+          <article
+            class="game-card"
+            data-title="Reaction Rush"
+            data-category="action"
+            data-game="reaction"
+          >
+
+            <div class="game-art art-8">
+              ⚡
+            </div>
+
             <div class="game-info">
+
               <span>Action</span>
-              <h3>Reaction Rush</h3>
-              <p>Test your reaction time.</p>
-              <button class="play-btn">PLAY GAME →</button>
+
+              <h3>
+                Reaction Rush
+              </h3>
+
+              <p>
+                Test your reaction time.
+              </p>
+
+              <button class="play-btn" type="button">
+                PLAY GAME →
+              </button>
+
             </div>
+
           </article>
 
 
-          <!-- 9 -->
-          <article class="game-card" data-title="Math Sprint" data-category="puzzle" data-game="math">
-            <div class="game-art art-9">➗</div>
-            <div class="game-info">
-              <span>Puzzle</span>
-              <h3>Math Sprint</h3>
-              <p>Solve calculations quickly.</p>
-              <button class="play-btn">PLAY GAME →</button>
+          <!-- 09 -->
+          <article
+            class="game-card"
+            data-title="Math Sprint"
+            data-category="puzzle"
+            data-game="math"
+          >
+
+            <div class="game-art art-9">
+              ➗
             </div>
+
+            <div class="game-info">
+
+              <span>Puzzle</span>
+
+              <h3>
+                Math Sprint
+              </h3>
+
+              <p>
+                Solve calculations quickly.
+              </p>
+
+              <button class="play-btn" type="button">
+                PLAY GAME →
+              </button>
+
+            </div>
+
           </article>
 
 
           <!-- 10 -->
-          <article class="game-card" data-title="Brick Breaker" data-category="arcade" data-game="breakout">
-            <div class="game-art art-10">🧱</div>
-            <div class="game-info">
-              <span>Arcade</span>
-              <h3>Brick Breaker</h3>
-              <p>Destroy every brick.</p>
-              <button class="play-btn">PLAY GAME →</button>
+          <article
+            class="game-card"
+            data-title="Brick Breaker"
+            data-category="arcade"
+            data-game="breakout"
+          >
+
+            <div class="game-art art-10">
+              🧱
             </div>
+
+            <div class="game-info">
+
+              <span>Arcade</span>
+
+              <h3>
+                Brick Breaker
+              </h3>
+
+              <p>
+                Destroy every brick.
+              </p>
+
+              <button class="play-btn" type="button">
+                PLAY GAME →
+              </button>
+
+            </div>
+
           </article>
 
 
           <!-- 11 -->
-          <article class="game-card" data-title="Mini Pong" data-category="sports" data-game="pong">
-            <div class="game-art art-11">🏓</div>
-            <div class="game-info">
-              <span>Sports</span>
-              <h3>Mini Pong</h3>
-              <p>Beat the computer.</p>
-              <button class="play-btn">PLAY GAME →</button>
+          <article
+            class="game-card"
+            data-title="Mini Pong"
+            data-category="sports"
+            data-game="pong"
+          >
+
+            <div class="game-art art-11">
+              🏓
             </div>
+
+            <div class="game-info">
+
+              <span>Sports</span>
+
+              <h3>
+                Mini Pong
+              </h3>
+
+              <p>
+                Beat the computer.
+              </p>
+
+              <button class="play-btn" type="button">
+                PLAY GAME →
+              </button>
+
+            </div>
+
           </article>
 
 
           <!-- 12 -->
-          <article class="game-card" data-title="Catch The Coin" data-category="arcade" data-game="catch">
-            <div class="game-art art-12">🪙</div>
-            <div class="game-info">
-              <span>Arcade</span>
-              <h3>Catch The Coin</h3>
-              <p>Catch falling coins.</p>
-              <button class="play-btn">PLAY GAME →</button>
+          <article
+            class="game-card"
+            data-title="Catch The Coin"
+            data-category="arcade"
+            data-game="catch"
+          >
+
+            <div class="game-art art-12">
+              🪙
             </div>
+
+            <div class="game-info">
+
+              <span>Arcade</span>
+
+              <h3>
+                Catch The Coin
+              </h3>
+
+              <p>
+                Catch falling coins.
+              </p>
+
+              <button class="play-btn" type="button">
+                PLAY GAME →
+              </button>
+
+            </div>
+
           </article>
 
 
-          <!-- NEW 13 -->
-          <article class="game-card" data-title="Neon Racer" data-category="action" data-game="racer">
-            <div class="game-art art-13">🏎️</div>
+          <!-- 13 -->
+          <article
+            class="game-card"
+            data-title="Neon Racer"
+            data-category="action"
+            data-game="racer"
+          >
+
+            <div class="game-art art-13">
+              🏎️
+            </div>
+
             <div class="game-info">
+
               <span>Action</span>
-              <h3>Neon Racer</h3>
-              <p>Drive and avoid traffic.</p>
-              <button class="play-btn">PLAY GAME →</button>
+
+              <h3>
+                Neon Racer
+              </h3>
+
+              <p>
+                Drive and avoid traffic.
+              </p>
+
+              <button class="play-btn" type="button">
+                PLAY GAME →
+              </button>
+
             </div>
+
           </article>
 
 
-          <!-- NEW 14 -->
-          <article class="game-card" data-title="Block Tetris" data-category="puzzle" data-game="tetris">
-            <div class="game-art art-14">🧱</div>
+          <!-- 14 -->
+          <article
+            class="game-card"
+            data-title="Block Tetris"
+            data-category="puzzle"
+            data-game="tetris"
+          >
+
+            <div class="game-art art-14">
+              🧱
+            </div>
+
             <div class="game-info">
+
               <span>Puzzle</span>
-              <h3>Block Tetris</h3>
-              <p>Clear falling blocks.</p>
-              <button class="play-btn">PLAY GAME →</button>
+
+              <h3>
+                Block Tetris
+              </h3>
+
+              <p>
+                Clear falling blocks.
+              </p>
+
+              <button class="play-btn" type="button">
+                PLAY GAME →
+              </button>
+
             </div>
+
           </article>
 
 
-          <!-- NEW 15 -->
-          <article class="game-card" data-title="Flappy Sky" data-category="arcade" data-game="flappy">
-            <div class="game-art art-15">🐦</div>
+          <!-- 15 -->
+          <article
+            class="game-card"
+            data-title="Flappy Sky"
+            data-category="arcade"
+            data-game="flappy"
+          >
+
+            <div class="game-art art-15">
+              🐦
+            </div>
+
             <div class="game-info">
+
               <span>Arcade</span>
-              <h3>Flappy Sky</h3>
-              <p>Fly between obstacles.</p>
-              <button class="play-btn">PLAY GAME →</button>
+
+              <h3>
+                Flappy Sky
+              </h3>
+
+              <p>
+                Fly between obstacles.
+              </p>
+
+              <button class="play-btn" type="button">
+                PLAY GAME →
+              </button>
+
             </div>
+
           </article>
 
 
-          <!-- NEW 16 -->
-          <article class="game-card" data-title="2048 Master" data-category="puzzle" data-game="2048">
-            <div class="game-art art-16">🔢</div>
+          <!-- 16 -->
+          <article
+            class="game-card"
+            data-title="2048 Master"
+            data-category="puzzle"
+            data-game="2048"
+          >
+
+            <div class="game-art art-16">
+              🔢
+            </div>
+
             <div class="game-info">
+
               <span>Puzzle</span>
-              <h3>2048 Master</h3>
-              <p>Combine numbers to win.</p>
-              <button class="play-btn">PLAY GAME →</button>
+
+              <h3>
+                2048 Master
+              </h3>
+
+              <p>
+                Combine numbers to win.
+              </p>
+
+              <button class="play-btn" type="button">
+                PLAY GAME →
+              </button>
+
             </div>
+
           </article>
 
 
-          <!-- NEW 17 -->
-          <article class="game-card" data-title="Minesweeper" data-category="strategy" data-game="minesweeper">
-            <div class="game-art art-17">💣</div>
+          <!-- 17 -->
+          <article
+            class="game-card"
+            data-title="Minesweeper"
+            data-category="strategy"
+            data-game="minesweeper"
+          >
+
+            <div class="game-art art-17">
+              💣
+            </div>
+
             <div class="game-info">
+
               <span>Strategy</span>
-              <h3>Minesweeper</h3>
-              <p>Find safe squares.</p>
-              <button class="play-btn">PLAY GAME →</button>
+
+              <h3>
+                Minesweeper
+              </h3>
+
+              <p>
+                Find safe squares.
+              </p>
+
+              <button class="play-btn" type="button">
+                PLAY GAME →
+              </button>
+
             </div>
+
           </article>
 
 
-          <!-- NEW 18 -->
-          <article class="game-card" data-title="Connect Four" data-category="strategy" data-game="connect4">
-            <div class="game-art art-18">🔴</div>
+          <!-- 18 -->
+          <article
+            class="game-card"
+            data-title="Connect Four"
+            data-category="strategy"
+            data-game="connect4"
+          >
+
+            <div class="game-art art-18">
+              🔴
+            </div>
+
             <div class="game-info">
+
               <span>Strategy</span>
-              <h3>Connect Four</h3>
-              <p>Connect four pieces.</p>
-              <button class="play-btn">PLAY GAME →</button>
+
+              <h3>
+                Connect Four
+              </h3>
+
+              <p>
+                Connect four pieces.
+              </p>
+
+              <button class="play-btn" type="button">
+                PLAY GAME →
+              </button>
+
             </div>
+
           </article>
 
 
-          <!-- NEW 19 -->
-          <article class="game-card" data-title="Air Hockey" data-category="sports" data-game="airhockey">
-            <div class="game-art art-19">🏒</div>
+          <!-- 19 -->
+          <article
+            class="game-card"
+            data-title="Air Hockey"
+            data-category="sports"
+            data-game="airhockey"
+          >
+
+            <div class="game-art art-19">
+              🏒
+            </div>
+
             <div class="game-info">
+
               <span>Sports</span>
-              <h3>Air Hockey</h3>
-              <p>Score against the AI.</p>
-              <button class="play-btn">PLAY GAME →</button>
+
+              <h3>
+                Air Hockey
+              </h3>
+
+              <p>
+                Score against the AI.
+              </p>
+
+              <button class="play-btn" type="button">
+                PLAY GAME →
+              </button>
+
             </div>
+
           </article>
 
 
-          <!-- NEW 20 -->
-          <article class="game-card" data-title="Target Shooter" data-category="action" data-game="target">
-            <div class="game-art art-20">🎯</div>
+          <!-- 20 -->
+          <article
+            class="game-card"
+            data-title="Target Shooter"
+            data-category="action"
+            data-game="target"
+          >
+
+            <div class="game-art art-20">
+              🎯
+            </div>
+
             <div class="game-info">
+
               <span>Action</span>
-              <h3>Target Shooter</h3>
-              <p>Hit moving targets.</p>
-              <button class="play-btn">PLAY GAME →</button>
+
+              <h3>
+                Target Shooter
+              </h3>
+
+              <p>
+                Hit moving targets.
+              </p>
+
+              <button class="play-btn" type="button">
+                PLAY GAME →
+              </button>
+
             </div>
+
           </article>
 
 
-          <!-- NEW 21 -->
-          <article class="game-card" data-title="Jump Runner" data-category="arcade" data-game="runner">
-            <div class="game-art art-21">🏃</div>
+          <!-- 21 -->
+          <article
+            class="game-card"
+            data-title="Jump Runner"
+            data-category="arcade"
+            data-game="runner"
+          >
+
+            <div class="game-art art-21">
+              🏃
+            </div>
+
             <div class="game-info">
+
               <span>Arcade</span>
-              <h3>Jump Runner</h3>
-              <p>Jump over obstacles.</p>
-              <button class="play-btn">PLAY GAME →</button>
+
+              <h3>
+                Jump Runner
+              </h3>
+
+              <p>
+                Jump over obstacles.
+              </p>
+
+              <button class="play-btn" type="button">
+                PLAY GAME →
+              </button>
+
             </div>
+
           </article>
 
 
-          <!-- NEW 22 -->
-          <article class="game-card" data-title="Space Invaders" data-category="action" data-game="space">
-            <div class="game-art art-22">👾</div>
+          <!-- 22 -->
+          <article
+            class="game-card"
+            data-title="Space Invaders"
+            data-category="action"
+            data-game="space"
+          >
+
+            <div class="game-art art-22">
+              👾
+            </div>
+
             <div class="game-info">
+
               <span>Action</span>
-              <h3>Space Invaders</h3>
-              <p>Defend your spaceship.</p>
-              <button class="play-btn">PLAY GAME →</button>
+
+              <h3>
+                Space Invaders
+              </h3>
+
+              <p>
+                Defend your spaceship.
+              </p>
+
+              <button class="play-btn" type="button">
+                PLAY GAME →
+              </button>
+
             </div>
+
           </article>
 
 
-          <!-- NEW 23 -->
-          <article class="game-card" data-title="Simon Memory" data-category="puzzle" data-game="simon">
-            <div class="game-art art-23">🧠</div>
+          <!-- 23 -->
+          <article
+            class="game-card"
+            data-title="Simon Memory"
+            data-category="puzzle"
+            data-game="simon"
+          >
+
+            <div class="game-art art-23">
+              🧠
+            </div>
+
             <div class="game-info">
+
               <span>Puzzle</span>
-              <h3>Simon Memory</h3>
-              <p>Repeat the sequence.</p>
-              <button class="play-btn">PLAY GAME →</button>
+
+              <h3>
+                Simon Memory
+              </h3>
+
+              <p>
+                Repeat the sequence.
+              </p>
+
+              <button class="play-btn" type="button">
+                PLAY GAME →
+              </button>
+
             </div>
+
           </article>
 
 
-          <!-- NEW 24 -->
-          <article class="game-card" data-title="Word Scramble" data-category="puzzle" data-game="word">
-            <div class="game-art art-24">🔤</div>
+          <!-- 24 -->
+          <article
+            class="game-card"
+            data-title="Word Scramble"
+            data-category="puzzle"
+            data-game="word"
+          >
+
+            <div class="game-art art-24">
+              🔤
+            </div>
+
             <div class="game-info">
+
               <span>Puzzle</span>
-              <h3>Word Scramble</h3>
-              <p>Unscramble the word.</p>
-              <button class="play-btn">PLAY GAME →</button>
+
+              <h3>
+                Word Scramble
+              </h3>
+
+              <p>
+                Unscramble the word.
+              </p>
+
+              <button class="play-btn" type="button">
+                PLAY GAME →
+              </button>
+
             </div>
+
           </article>
 
 
-          <!-- NEW 25 -->
-          <article class="game-card" data-title="Coin Collector" data-category="casual" data-game="collector">
-            <div class="game-art art-25">🪙</div>
+          <!-- 25 -->
+          <article
+            class="game-card"
+            data-title="Coin Collector"
+            data-category="casual"
+            data-game="collector"
+          >
+
+            <div class="game-art art-25">
+              🪙
+            </div>
+
             <div class="game-info">
+
               <span>Casual</span>
-              <h3>Coin Collector</h3>
-              <p>Collect as many coins as possible.</p>
-              <button class="play-btn">PLAY GAME →</button>
+
+              <h3>
+                Coin Collector
+              </h3>
+
+              <p>
+                Collect as many coins as possible.
+              </p>
+
+              <button class="play-btn" type="button">
+                PLAY GAME →
+              </button>
+
             </div>
+
           </article>
 
 
-          <!-- NEW 26 -->
-          <article class="game-card" data-title="Avoid The Blocks" data-category="action" data-game="avoid">
-            <div class="game-art art-26">⬛</div>
+          <!-- 26 -->
+          <article
+            class="game-card"
+            data-title="Avoid The Blocks"
+            data-category="action"
+            data-game="avoid"
+          >
+
+            <div class="game-art art-26">
+              ⬛
+            </div>
+
             <div class="game-info">
+
               <span>Action</span>
-              <h3>Avoid The Blocks</h3>
-              <p>Survive as long as possible.</p>
-              <button class="play-btn">PLAY GAME →</button>
+
+              <h3>
+                Avoid The Blocks
+              </h3>
+
+              <p>
+                Survive as long as possible.
+              </p>
+
+              <button class="play-btn" type="button">
+                PLAY GAME →
+              </button>
+
             </div>
+
           </article>
 
 
-          <!-- Additional 12 games to make 38 -->
+          <!-- 27 -->
+          <article
+            class="game-card"
+            data-title="Grid Battle"
+            data-category="strategy"
+            data-game="tictactoe"
+          >
 
-          <article class="game-card" data-title="Grid Battle" data-category="strategy" data-game="tictactoe">
-            <div class="game-art art-27">⭕</div>
+            <div class="game-art art-27">
+              ⭕
+            </div>
+
             <div class="game-info">
+
               <span>Strategy</span>
-              <h3>Grid Battle</h3>
-              <p>Challenge the AI.</p>
-              <button class="play-btn">PLAY GAME →</button>
+
+              <h3>
+                Grid Battle
+              </h3>
+
+              <p>
+                Challenge the AI.
+              </p>
+
+              <button class="play-btn" type="button">
+                PLAY GAME →
+              </button>
+
             </div>
+
           </article>
 
 
-          <article class="game-card" data-title="Emoji Pairs" data-category="puzzle" data-game="memory">
-            <div class="game-art art-28">🎴</div>
+          <!-- 28 -->
+          <article
+            class="game-card"
+            data-title="Emoji Pairs"
+            data-category="puzzle"
+            data-game="memory"
+          >
+
+            <div class="game-art art-28">
+              🎴
+            </div>
+
             <div class="game-info">
+
               <span>Puzzle</span>
-              <h3>Emoji Pairs</h3>
-              <p>Match the hidden emojis.</p>
-              <button class="play-btn">PLAY GAME →</button>
+
+              <h3>
+                Emoji Pairs
+              </h3>
+
+              <p>
+                Match the hidden emojis.
+              </p>
+
+              <button class="play-btn" type="button">
+                PLAY GAME →
+              </button>
+
             </div>
+
           </article>
 
 
-          <article class="game-card" data-title="Secret Number" data-category="puzzle" data-game="guess">
-            <div class="game-art art-29">🔐</div>
+          <!-- 29 -->
+          <article
+            class="game-card"
+            data-title="Secret Number"
+            data-category="puzzle"
+            data-game="guess"
+          >
+
+            <div class="game-art art-29">
+              🔐
+            </div>
+
             <div class="game-info">
+
               <span>Puzzle</span>
-              <h3>Secret Number</h3>
-              <p>Find the hidden number.</p>
-              <button class="play-btn">PLAY GAME →</button>
+
+              <h3>
+                Secret Number
+              </h3>
+
+              <p>
+                Find the hidden number.
+              </p>
+
+              <button class="play-btn" type="button">
+                PLAY GAME →
+              </button>
+
             </div>
+
           </article>
 
 
-          <article class="game-card" data-title="RPS Duel" data-category="casual" data-game="rps">
-            <div class="game-art art-30">✌️</div>
+          <!-- 30 -->
+          <article
+            class="game-card"
+            data-title="RPS Duel"
+            data-category="casual"
+            data-game="rps"
+          >
+
+            <div class="game-art art-30">
+              ✌️
+            </div>
+
             <div class="game-info">
+
               <span>Casual</span>
-              <h3>RPS Duel</h3>
-              <p>Win the best-of series.</p>
-              <button class="play-btn">PLAY GAME →</button>
+
+              <h3>
+                RPS Duel
+              </h3>
+
+              <p>
+                Win the best-of series.
+              </p>
+
+              <button class="play-btn" type="button">
+                PLAY GAME →
+              </button>
+
             </div>
+
           </article>
 
 
-          <article class="game-card" data-title="Tap Frenzy" data-category="arcade" data-game="clicker">
-            <div class="game-art art-31">🔥</div>
+          <!-- 31 -->
+          <article
+            class="game-card"
+            data-title="Tap Frenzy"
+            data-category="arcade"
+            data-game="clicker"
+          >
+
+            <div class="game-art art-31">
+              🔥
+            </div>
+
             <div class="game-info">
+
               <span>Arcade</span>
-              <h3>Tap Frenzy</h3>
-              <p>Get the highest score.</p>
-              <button class="play-btn">PLAY GAME →</button>
+
+              <h3>
+                Tap Frenzy
+              </h3>
+
+              <p>
+                Get the highest score.
+              </p>
+
+              <button class="play-btn" type="button">
+                PLAY GAME →
+              </button>
+
             </div>
+
           </article>
 
 
-          <article class="game-card" data-title="Neon Snake" data-category="arcade" data-game="snake">
-            <div class="game-art art-32">🐍</div>
+          <!-- 32 -->
+          <article
+            class="game-card"
+            data-title="Neon Snake"
+            data-category="arcade"
+            data-game="snake"
+          >
+
+            <div class="game-art art-32">
+              🐍
+            </div>
+
             <div class="game-info">
+
               <span>Arcade</span>
-              <h3>Neon Snake</h3>
-              <p>Grow your snake.</p>
-              <button class="play-btn">PLAY GAME →</button>
+
+              <h3>
+                Neon Snake
+              </h3>
+
+              <p>
+                Grow your snake.
+              </p>
+
+              <button class="play-btn" type="button">
+                PLAY GAME →
+              </button>
+
             </div>
+
           </article>
 
 
-          <article class="game-card" data-title="Mole Hunter" data-category="arcade" data-game="whack">
-            <div class="game-art art-33">🐹</div>
+          <!-- 33 -->
+          <article
+            class="game-card"
+            data-title="Mole Hunter"
+            data-category="arcade"
+            data-game="whack"
+          >
+
+            <div class="game-art art-33">
+              🐹
+            </div>
+
             <div class="game-info">
+
               <span>Arcade</span>
-              <h3>Mole Hunter</h3>
-              <p>Catch the moving target.</p>
-              <button class="play-btn">PLAY GAME →</button>
+
+              <h3>
+                Mole Hunter
+              </h3>
+
+              <p>
+                Catch the moving target.
+              </p>
+
+              <button class="play-btn" type="button">
+                PLAY GAME →
+              </button>
+
             </div>
+
           </article>
 
 
-          <article class="game-card" data-title="Reflex Test" data-category="action" data-game="reaction">
-            <div class="game-art art-34">⚡</div>
+          <!-- 34 -->
+          <article
+            class="game-card"
+            data-title="Reflex Test"
+            data-category="action"
+            data-game="reaction"
+          >
+
+            <div class="game-art art-34">
+              ⚡
+            </div>
+
             <div class="game-info">
+
               <span>Action</span>
-              <h3>Reflex Test</h3>
-              <p>React as quickly as you can.</p>
-              <button class="play-btn">PLAY GAME →</button>
+
+              <h3>
+                Reflex Test
+              </h3>
+
+              <p>
+                React as quickly as you can.
+              </p>
+
+              <button class="play-btn" type="button">
+                PLAY GAME →
+              </button>
+
             </div>
+
           </article>
 
 
-          <article class="game-card" data-title="Brain Boost" data-category="puzzle" data-game="math">
-            <div class="game-art art-35">🧮</div>
+          <!-- 35 -->
+          <article
+            class="game-card"
+            data-title="Brain Boost"
+            data-category="puzzle"
+            data-game="math"
+          >
+
+            <div class="game-art art-35">
+              🧮
+            </div>
+
             <div class="game-info">
+
               <span>Puzzle</span>
-              <h3>Brain Boost</h3>
-              <p>Test your calculation speed.</p>
-              <button class="play-btn">PLAY GAME →</button>
+
+              <h3>
+                Brain Boost
+              </h3>
+
+              <p>
+                Test your calculation speed.
+              </p>
+
+              <button class="play-btn" type="button">
+                PLAY GAME →
+              </button>
+
             </div>
+
           </article>
 
 
-          <article class="game-card" data-title="Neon Breaker" data-category="arcade" data-game="breakout">
-            <div class="game-art art-36">💥</div>
+          <!-- 36 -->
+          <article
+            class="game-card"
+            data-title="Neon Breaker"
+            data-category="arcade"
+            data-game="breakout"
+          >
+
+            <div class="game-art art-36">
+              💥
+            </div>
+
             <div class="game-info">
+
               <span>Arcade</span>
-              <h3>Neon Breaker</h3>
-              <p>Break every block.</p>
-              <button class="play-btn">PLAY GAME →</button>
+
+              <h3>
+                Neon Breaker
+              </h3>
+
+              <p>
+                Break every block.
+              </p>
+
+              <button class="play-btn" type="button">
+                PLAY GAME →
+              </button>
+
             </div>
+
           </article>
 
 
-          <article class="game-card" data-title="Paddle Duel" data-category="sports" data-game="pong">
-            <div class="game-art art-37">🏓</div>
+          <!-- 37 -->
+          <article
+            class="game-card"
+            data-title="Paddle Duel"
+            data-category="sports"
+            data-game="pong"
+          >
+
+            <div class="game-art art-37">
+              🏓
+            </div>
+
             <div class="game-info">
+
               <span>Sports</span>
-              <h3>Paddle Duel</h3>
-              <p>Defeat your opponent.</p>
-              <button class="play-btn">PLAY GAME →</button>
+
+              <h3>
+                Paddle Duel
+              </h3>
+
+              <p>
+                Defeat your opponent.
+              </p>
+
+              <button class="play-btn" type="button">
+                PLAY GAME →
+              </button>
+
             </div>
+
           </article>
 
 
-          <article class="game-card" data-title="Falling Coins" data-category="casual" data-game="catch">
-            <div class="game-art art-38">💰</div>
-            <div class="game-info">
-              <span>Casual</span>
-              <h3>Falling Coins</h3>
-              <p>Catch the falling coins.</p>
-              <button class="play-btn">PLAY GAME →</button>
+          <!-- 38 -->
+          <article
+            class="game-card"
+            data-title="Falling Coins"
+            data-category="casual"
+            data-game="catch"
+          >
+
+            <div class="game-art art-38">
+              💰
             </div>
+
+            <div class="game-info">
+
+              <span>Casual</span>
+
+              <h3>
+                Falling Coins
+              </h3>
+
+              <p>
+                Catch the falling coins.
+              </p>
+
+              <button class="play-btn" type="button">
+                PLAY GAME →
+              </button>
+
+            </div>
+
           </article>
 
         </div>
 
 
-        <div class="no-results" id="noResults">
-          <div>🎮</div>
-          <h3>No games found</h3>
-          <p>Try another search or category.</p>
+        <!-- NO RESULTS -->
+
+        <div
+          class="no-results"
+          id="noResults"
+        >
+
+          <div>
+            🎮
+          </div>
+
+          <h3>
+            No games found
+          </h3>
+
+          <p>
+            Try another search or category.
+          </p>
+
         </div>
 
       </div>
@@ -644,30 +1568,72 @@
   </main>
 
 
-  <!-- ================= GAME MODAL ================= -->
-  <div class="game-modal" id="gameModal" aria-hidden="true">
+  <!-- =====================================================
+       GAME MODAL
+  ====================================================== -->
 
-    <div class="game-modal-box">
+  <div
+    class="game-modal"
+    id="gameModal"
+    aria-hidden="true"
+  >
+
+    <div
+      class="game-modal-box"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="gameTitle"
+    >
+
+      <!-- MODAL HEADER -->
 
       <div class="modal-header">
 
-        <div>
-          <span class="modal-label">NOW PLAYING</span>
-          <h2 id="gameTitle">Game</h2>
+        <div class="modal-title-wrap">
+
+          <span class="modal-label">
+            NOW PLAYING
+          </span>
+
+          <h2 id="gameTitle">
+            Game
+          </h2>
+
         </div>
+
 
         <div class="modal-score">
+
           SCORE:
-          <strong id="gameScore">0</strong>
+
+          <strong id="gameScore">
+            0
+          </strong>
+
         </div>
 
-        <button class="close-btn" id="closeGame">×</button>
+
+        <button
+          class="close-btn"
+          id="closeGame"
+          type="button"
+          aria-label="Close game"
+        >
+          ×
+        </button>
 
       </div>
 
 
-      <div class="game-stage" id="gameStage"></div>
+      <!-- GAME AREA -->
 
+      <div
+        class="game-stage"
+        id="gameStage"
+      ></div>
+
+
+      <!-- MODAL FOOTER -->
 
       <div class="modal-footer">
 
@@ -675,7 +1641,11 @@
           Use the controls to play.
         </span>
 
-        <button class="restart-btn" id="restartGame">
+        <button
+          class="restart-btn"
+          id="restartGame"
+          type="button"
+        >
           ↻ Restart
         </button>
 
@@ -686,25 +1656,44 @@
   </div>
 
 
-  <!-- ================= TOAST ================= -->
-  <div class="toast" id="toast"></div>
+  <!-- =====================================================
+       TOAST
+  ====================================================== -->
+
+  <div
+    class="toast"
+    id="toast"
+    role="status"
+    aria-live="polite"
+  ></div>
 
 
-  <!-- ================= FOOTER ================= -->
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+
   <footer class="footer">
 
     <div class="container footer-content">
 
       <div>
-        <a href="#" class="logo">
-          <span class="logo-icon">N</span>
+
+        <a href="#home" class="logo">
+
+          <span class="logo-icon">
+            N
+          </span>
+
           NEXORA
+
         </a>
 
         <p>
           Play. Discover. Repeat.
         </p>
+
       </div>
+
 
       <p>
         © 2026 NEXORA Gaming Portal
@@ -714,6 +1703,10 @@
 
   </footer>
 
+
+  <!-- =====================================================
+       JAVASCRIPT
+  ====================================================== -->
 
   <script src="script.js"></script>
 
